@@ -18,7 +18,7 @@ const questions = [
         }
     },
     {
-        //Prompts the user to enter a description of their project and uses a validator that will not allow the user to contine until they provide a description of thier project. 
+        //Prompts the creator to enter a description of their project and uses a validator that will not allow the user to contine until they provide a description of thier project. 
         type: "input",
         name: "description",
         message: "Please provide a description of your project. (Required) ",
@@ -32,14 +32,29 @@ const questions = [
         }
     },
     {
+        //Prompts the creator to enter installation instructions so that a user can install the necessary packages to run this program on their own machine. It is required, and validate is being use to ensure that the user actually entered installation instructions
         type: "input",
         name: "installation_instructions",
-        message: "Please provide instructions for installation.",
+        message: "Please provide instructions for installation. (Required)",
         validate: inputInstallation => {
             if (inputInstallation) {
                 return true;
             } else {
                 console.log("Please provide installation instructions to continue.");
+                return false;
+            }
+        }
+    },
+    {
+        //Prompts the creator to provide usage instructions so that the user knows how to use the particular site/project
+        type: "input",
+        name: "usage_instructions",
+        message: "Please provide usage instructions to instruct the user on how to use the site. (Require)",
+        validate: inputUsage => {
+            if (inputUsage) {
+                return true;
+            } else {
+                console.log("Please provide instructions on how to use your project to continue. ");
                 return false;
             }
         }
