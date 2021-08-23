@@ -30,6 +30,19 @@ const questions = [
                 return false;
             }
         }
+    },
+    {
+        type: "input",
+        name: "installation_instructions",
+        message: "Please provide instructions for installation.",
+        validate: inputInstallation => {
+            if (inputInstallation) {
+                return true;
+            } else {
+                console.log("Please provide installation instructions to continue.");
+                return false;
+            }
+        }
     }
 ];
 
