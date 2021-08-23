@@ -58,6 +58,20 @@ const questions = [
                 return false;
             }
         }
+    },
+    {
+        //Prompts the creator to add contributors to the project, including themselves. Validate is being used to ensure that the the creator adds a contributor to the project
+        type: "input",
+        name: "contributors",
+        message: "Please list all of the contributors for this project.",
+        validate: inputContributor => {
+            if (inputContributor) {
+                return true;
+            } else {
+                console.log("Please enter the contributors to this project to continue.");
+                return false;
+            }
+        }
     }
 ];
 
