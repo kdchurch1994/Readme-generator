@@ -63,7 +63,7 @@ const questions = [
         //Prompts the creator to add contributors to the project, including themselves. Validate is being used to ensure that the the creator adds a contributor to the project
         type: "input",
         name: "contributors",
-        message: "Please list all of the contributors for this project.",
+        message: "Please list all of the contributors for this project. (Required)",
         validate: inputContributor => {
             if (inputContributor) {
                 return true;
@@ -72,6 +72,27 @@ const questions = [
                 return false;
             }
         }
+    },
+    {
+        //Prompts the creator to provides instructions for any tests that they may have used when building their application. If no tests were created, the creator should enter that there are no tests. 
+        type: "input",
+        name: "tests",
+        message: "Please provides instructions on running the tests you created when building the program. If no tests, enter 'There are no tests'. (Required)",
+        validate: inputTests => {
+            if (inputTests) {
+                return true;
+            } else {
+                console.log("Please enter instructions for the tests you created to continue.");
+                return false;
+            }
+        }
+    }, 
+    {
+        //Prompts the creator to choose what licensing is being used with a "No License" option available for projects that have no license. 
+        type: "list",
+        name: "license",
+        message: "From the options provided, select which license you used. Select the fourth option 'No License' if no license was used.",
+        choices: ["Apache-2.0", "MIT", "MPL-2.0", "No License"],
     }
 ];
 
