@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
-//const fs = require("fs");
+const fs = require("fs");
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -125,10 +125,19 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {//asynchronously writes data to the file filename using data to store and generate the contents of the file. 
+        if (err) { //if there is an error with writing the file, and error will be thrown; otherwise a README file will be created
+            throw err;
+        } else {
+            console.log("Your README has been created.")
+        }
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
+    //This will start the inquirer.prompt that will ask the creator the list of questions from the array questions.
     inquirer.prompt(questions)
 }
 
