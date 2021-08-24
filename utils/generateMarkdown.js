@@ -58,7 +58,7 @@ function generateMarkdown(data) {
   * [Tests](#tests)
   * [Credits](#credits)
   * [License](#license)
-  * [Questions](#githubUser)
+  * [Questions](#github_user)
   
   ## Installation
   ${data.installation_instructions}
@@ -78,8 +78,8 @@ function generateMarkdown(data) {
   ${renderLicenseLink(data.license)}
 
   ## Questions
-  - Github Page: [$data.github_user]
-  - Email: $(data.email)
+  - Github Page: ${data.github_user}
+  - Email: ${data.email}
 `;
 }
 
