@@ -93,6 +93,34 @@ const questions = [
         name: "license",
         message: "From the options provided, select which license you used. Select the fourth option 'No License' if no license was used.",
         choices: ["Apache-2.0", "MIT", "MPL-2.0", "No License"],
+    },
+    {
+        //Prompts the creator for their Github username. Validate is being used to ensure that they enter the github username. 
+        type: "input",
+        name: "github_user",
+        message: "Please enter your Github username. (Required)",
+        validate: inputgithubUser => {
+            if (inputgithubUser) {
+                return true;
+            } else {
+                console.log("Please enter your Github username to continue.");
+                return false;
+            }
+        }
+    },
+    {
+        //Prompts the creator to add their email info. Validate is being used to ensure that email information was entered. 
+        type: "input",
+        name: "email",
+        message: "Please enter your email address. (Required)",
+        validate: inputEmail => {
+            if (inputEmail) {
+                return true;
+            } else {
+                console.log("Please enter your email address to continue.");
+                return false;
+            }
+        }
     }
 ];
 
