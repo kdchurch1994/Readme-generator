@@ -50,7 +50,7 @@ const questions = [
         //Prompts the creator to provide usage instructions so that the user knows how to use the particular site/project
         type: "input",
         name: "usage_instructions",
-        message: "Please provide usage instructions to instruct the user on how to use the site. (Require)",
+        message: "Please provide usage instructions to instruct the user on how to use the site. (Required)",
         validate: inputUsage => {
             if (inputUsage) {
                 return true;
@@ -131,7 +131,7 @@ function writeToFile(fileName, data) {
         if (err) { //if there is an error with writing the file, and error will be thrown; otherwise a README file will be created
             throw err;
         } else {
-            console.log("Your README has been created.")
+            console.log("Your README file has been created.")
         }
     })
 }
