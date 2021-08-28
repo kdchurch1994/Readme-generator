@@ -1,7 +1,7 @@
-# dafadf
+# Readme-generator
 
   ## Description
-  adsfdasf
+  This project allows the user to generate a Readme file based on their input. 
 
   ## Table of Contents
   * [Installation](#installation)
@@ -12,16 +12,16 @@
   * [Questions](#questions)
   
   ## Installation
-  sadfdsaf
+  To use this project, clone the respository from Github, open the code base, open the terminal, and run the command "node index.js. After this, the user will be prompted for input related to their project. Once completed, a Readme file will be generated. 
   
   ## Usage
-  adsfdsaf
+  To use this project, clone the respository from Github, open the code base, open the terminal, and run the command "node index.js. After this, the user will be prompted for input related to their project. Once completed, a Readme file will be generated.
 
   ## Tests
-  adsfad
+  There are no tests.
 
   ## Credits
-  adsfdasf
+  Kyle Church
 
   ## Licenses
   
@@ -29,5 +29,5 @@
   [MIT Link](https://opensource.org/licenses/MIT)
 
   ## Questions
-  - Github Page: adsfdsaf
-  - Email: dsafdsaf
+  - Github Page: kdchurch1994
+  - Email: kdchurch@bsu.edu
