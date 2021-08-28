@@ -22,6 +22,9 @@
 
   ## Credits
   Kyle Church
+  
+  ## Link to Video
+  Readme Generator Walkthrough: https://youtu.be/PPRbSA2u62Q
 
   ## Licenses
   
